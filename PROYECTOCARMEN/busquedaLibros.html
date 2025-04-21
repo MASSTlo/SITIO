@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ENCABEZADO */
+        .header {
+            background-color: #400897;
+            color: white;
+            padding: 15px 20px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .title {
+            font-weight: bold;
+            flex-grow: 1; /* Para ocupar el espacio disponible */
+            text-align: center;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .header a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footer img {
+            width: 80px;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            width: 200px;
+            height: 200px;
+            background-color: #d3d3d3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+            filter: brightness(1.2);
+            background-color: #bfbfbf;
+        }
+
+        .button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div class="header">
+        <a href="base.html">🏠</a>
+        <span class="title">BIBLIOTECA</span>
+        <span></span> <!-- Espacio vacío para centrar título -->
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        <div class="button" onclick="location.href='solicitudDeLibros.html'">
+            <img src="controles.jpeg" alt="Control">
+            <p>Solicitud</p>
+        </div>
+        <div class="button" onclick="location.href='buscar.html'">
+            <img src="buscar.jpeg" alt="Buscar">
+            <p>Buscar</p>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <div class="footer">
+        <img src="1.png" alt="Educación">
+        <img src="2.png" alt="Tecnológico Nacional de México">
+        <img src="3.png" alt="Innovación, Ciencia y Tecnología">
+        <img src="4.png" alt="Jalisco">
+    </div>
+
+</body>
+</html>

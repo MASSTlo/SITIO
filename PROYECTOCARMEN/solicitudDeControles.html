@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Controles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        /* ENCABEZADO */
+        .header {
+            background-color: #3D2E81;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .header a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* FORMULARIO */
+        .form-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        h2 {
+            margin-top: 15px;
+            color: #3D2E81;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .btn {
+            background-color: #2E237D;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #251c5c;
+        }
+
+        /* PIE DE PÁGINA */
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footer img {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div class="header">
+        <span>BIBLIOTECA</span>
+        <a href="base.html">🏠</a>
+    </div>
+
+    <!-- TÍTULO -->
+    <h2>SOLICITUD DE CONTROLES</h2>
+
+    <!-- FORMULARIO -->
+    <div class="form-container">
+        <form action="guardar_solicitud.php" method="post">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required autocomplete="off">
+
+            <label for="nombre_docente">Nombre del docente</label>
+            <input type="text" id="nombre_docente" name="nombre_docente" placeholder="Ingrese el nombre" required autocomplete="off">
+
+            <label for="aula">Aula</label>
+            <input type="text" id="aula" name="aula" placeholder="Ingrese el aula" required autocomplete="off">
+
+            <label for="hora_prestamo">Hora del préstamo</label>
+            <input type="time" id="hora_prestamo" name="hora_prestamo" required>
+
+            <label for="hora_entrega">Hora de entrega</label>
+            <input type="time" id="hora_entrega" name="hora_entrega" required>
+
+            <label for="recibo">Recibo</label>
+            <input type="text" id="recibo" name="recibo" placeholder="Ingrese el recibo" required autocomplete="off">
+
+            <button class="btn" type="submit">GUARDAR</button>
+        </form>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <div class="footer">
+        <img src="1.png" alt="Educación">
+        <img src="2.png" alt="Tecnológico Nacional de México">
+        <img src="3.png" alt="Innovación, Ciencia y Tecnología">
+        <img src="4.png" alt="Jalisco">
+    </div>
+
+</body>
+</html>

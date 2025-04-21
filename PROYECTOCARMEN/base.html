@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        .footer img {
+            width: 80px;
+            margin: 5px;
+        }
+    
+        .header {
+            background-color: #400897;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin-right: 20px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #3a1c7b;
+            padding: 10px;
+        }
+        .tab {
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .tab:hover {
+            background-color: #5a2ea0;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .button, .option {
+            width: 200px;
+            height: 200px;
+            background-color: #d3d3d3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .button:hover, .option:hover {
+            background-color: #bfbfbf;
+
+        }
+        .button, .option {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+
+
+.button:hover, .option:hover {
+    transform: scale(1.1) translateY(-5px); /* Aumenta y se mueve arriba */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Agrega sombra */
+    filter: brightness(1.2); /* Aumenta el brillo */
+}
+
+        
+        .button img, .option img {
+    width: 100%;  /* Ocupa todo el ancho del botón */
+    height: 100%; /* Ocupa todo el alto del botón */
+    object-fit: cover; /* Ajusta la imagen sin deformarla, puede recortar */
+    border-radius: 10px; /* Mantiene la estética del botón */
+}
+        
+        .footer {
+            background-color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="header">
+        <span>BIBLIOTECA</span>
+        <a href="base.html">🏠</a>
+    </div>
+    
+    <div id="pagina1" class="content active">
+        <div class="container">
+            <div class="button" onclick="location.href='solicitudDeControles.html'">
+                <img src="controles.jpeg" alt="Control">
+                <p>Control</p>
+            </div>
+            <div class="button" onclick="location.href='busquedaLibros.html'">
+                <img src="libros.jpeg" alt="Li">
+                <p>Libros</p>
+            </div>
+           
+            
+        
+            
+        </div>
+        <div class="footer">
+            <img src="1.png" alt="Educación">
+            <img src="2.png" alt="Tecnológico Nacional de México">
+            <img src="3.png" alt="Innovación, Ciencia y Tecnología">
+            <img src="4.png" alt="Jalisco">
+        </div>
+        
+
+    </div>
+
+    
+</body>
+</html>

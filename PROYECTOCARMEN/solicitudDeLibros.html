@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Libro - Biblioteca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ENCABEZADO */
+        .header {
+            background-color: #3D2E81;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .header a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: left;
+            flex: 1; /* Se ajusta para que el pie de página se mantenga abajo */
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2e008b;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        /* BOTÓN */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #2e008b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #23006d;
+        }
+
+        /* PIE DE PÁGINA */
+        .footer {
+            background-color: #3D2E81;
+            padding: 10px;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .footer img {
+            width: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div class="header">
+        <span>BIBLIOTECA</span>
+        <a href="base.html">🏠</a>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="container">
+        <h1>BIBLIOTECA</h1>
+        <h2>Solicitar libro</h2>
+
+        <label for="fecha-prestamo">Fecha de préstamo:</label>
+        <input type="date" id="fecha-prestamo" name="fecha-prestamo" required>
+
+        <label for="fecha-regreso">Fecha de regreso:</label>
+        <input type="date" id="fecha-regreso" name="fecha-regreso" required>
+
+        <div class="section">
+            <h2>Datos del solicitante</h2>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+            <label for="grupo">Grupo:</label>
+            <input type="text" id="grupo" name="grupo" placeholder="Ingrese su grupo" required>
+
+            <label for="turno">Turno:</label>
+            <input type="text" id="turno" name="turno" placeholder="Matutino / Vespertino" required>
+
+            <label for="numero-control">Número de control:</label>
+            <input type="text" id="numero-control" name="numero-control" placeholder="Ingrese su número de control" required>
+
+            <label for="docto-entregado">Documento entregado:</label>
+            <input type="text" id="docto-entregado" name="docto-entregado" placeholder="Documento (Ejemplo: INE, Credencial)" required>
+        </div>
+
+        <div class="section">
+            <h2>Datos del título</h2>
+            <label for="codigo">Código:</label>
+            <input type="text" id="codigo" name="codigo" placeholder="Código del libro" required>
+
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Título del libro" required>
+
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" placeholder="Autor del libro" required>
+
+            <label for="editorial">Editorial:</label>
+            <input type="text" id="editorial" name="editorial" placeholder="Editorial del libro" required>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">Enviar solicitud</button>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <div class="footer">
+        <img src="1.png" alt="Educación">
+        <img src="2.png" alt="Tecnológico Nacional de México">
+        <img src="3.png" alt="Innovación, Ciencia y Tecnología">
+        <img src="4.png" alt="Jalisco">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Libro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ENCABEZADO */
+        .header {
+            background-color: #3D2E81;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .footer {
+            background-color: #3D2E81;
+            padding: 10px;
+            position: relative;  /* Cambié 'fixed' a 'relative' para evitar problemas de superposición */
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Ajuste el tamaño de las imágenes del pie de página */
+        .footer img {
+            width: 80px; /* Puedes ajustar este valor según el tamaño que desees */
+            margin: 0 10px;
+        }
+
+        .header a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            width: 90%;
+            max-width: 450px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #3D2E81;
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .btn {
+            background-color: #2E237D;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #251c5c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div class="header">
+        <span>BIBLIOTECA</span>
+        <a href="base.html">🏠</a>
+    </div>
+
+    <!-- FORMULARIO DE BÚSQUEDA -->
+    <div class="container">
+        <h2>BÚSQUEDA DE LIBRO</h2>
+        <form id="bookForm">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del libro">
+            
+            <label for="editorial">Editorial</label>
+            <input type="text" id="editorial" name="editorial" placeholder="Ingrese la editorial">
+            
+            <label for="clasificacion">Clasificación</label>
+            <input type="text" id="clasificacion" name="clasificacion" placeholder="Ej: Ciencia, Historia">
+            
+            <label for="autor">Autor</label>
+            <input type="text" id="autor" name="autor" placeholder="Ingrese el nombre del autor">
+            
+            <label for="codigo">Código</label>
+            <input type="text" id="codigo" name="codigo" placeholder="Código del libro">
+            
+            <button type="submit" class="btn">GUARDAR</button>
+        </form>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <div class="footer">
+        <img src="1.png" alt="Educación">
+        <img src="2.png" alt="Tecnológico Nacional de México">
+        <img src="3.png" alt="Innovación, Ciencia y Tecnología">
+        <img src="4.png" alt="Jalisco">
+    </div>
+
+    <!-- VALIDACIÓN DEL FORMULARIO -->
+    <script>
+        document.getElementById("bookForm").addEventListener("submit", function(event) {
+            let campos = ["nombre", "editorial", "clasificacion", "autor", "codigo"];
+            let incompletos = campos.some(id => {
+                let valor = document.getElementById(id).value.trim();
+                return valor === ""; // Asegura que no haya espacios en blanco
+            });
+
+            if (incompletos) {
+                alert("Por favor, complete todos los campos.");
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>
